@@ -19,6 +19,9 @@ public class MyClassLoader extends ClassLoader{
             }
             byteArrayOutputStream.flush();
             content = byteArrayOutputStream.toByteArray();
+
+            fileInputStream.close();
+            byteArrayOutputStream.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
